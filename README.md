@@ -1,5 +1,5 @@
 # game life 
- Challenge de Elias Ba youtube pour recreer le jeu de vie
+ Challenge de Elias Ba sur twitter pour recreer le jeu de vie
 
 # Jeu de la Vie - Readme
 
