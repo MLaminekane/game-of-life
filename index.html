@@ -44,20 +44,23 @@
                     <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                         <button
                             class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-                            onclick="resetGame()"><span>2.</span> Reset</button>
+                            onclick="resetGame()"><span>2.</span> Aleatoire</button>
+                    </li>
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <button id="userButton" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400" onclick="toggleUserMode()"><span>3.</span>Reset</button>
                     </li>
                         <a href="https://github.com/MLaminekane">
                             <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                                 <button
                                     class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-                                    ><span>3.</span> Github</button>
+                                    ><span>4.</span> Github</button>
                             </li>
                         </a>
                         <a href="https://mlaminedev.vercel.app/" class="drop">
                             <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                                 <button
                                     class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-                                    ><span>4.</span> Porfolio</button>
+                                    ><span>5.</span> Porfolio</button>
                             </li>
                         </a>
                 </ul>
@@ -69,10 +72,12 @@
         
       <div class="mt-8 flex flex-col items-center "> 
         <div class="grid mt-8" id="grid"></div>
-        <div style="height: auto;" class="mt-8">
-            <div class="flex flex-col items-center justify-center">    
-                <div id="generationCounter" class="text-white mt-4">Générations: 0</div>
-                <div id="populationCounter" class="text-white mt-4">Population: 0</div>
+        <div class="flex" >
+            <div style="height: auto;">
+                <div class="flex flex-col items-center justify-center">
+                    <div id="generationCounter" class="text-white mt-4">Générations: 0</div>
+                    <div id="populationCounter" class="text-white mt-4">Population: 0</div>
+                </div>
             </div>
         </div>
       </div>
@@ -117,6 +122,32 @@
         function toggleMenu() {
             var menu = document.getElementById('drop');
             menu.classList.toggle('hidden');
+        }
+        function clearGrid() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                cell.classList.remove('active');
+            });
+            grid = createEmptyGrid(gridSize);
+        }
+
+        function toggleUserMode() {
+            clearGrid();
+            updateGridDisplay();
+
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                cell.removeEventListener('click', toggleCell);
+                cell.addEventListener('click', toggleUserCell);
+            });
+        }
+
+        function toggleUserCell() {
+            const index = Array.from(this.parentNode.children).indexOf(this);
+            const row = Math.floor(index / gridSize);
+            const col = index % gridSize;
+            grid[row][col] = !grid[row][col];
+            updateGridDisplay();
         }
     </script>
 </body>
