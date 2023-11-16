@@ -6,6 +6,8 @@ const survivalMaxThreshold = 3;
 let grid = createRandomGrid(gridSize);
 let running = false;
 let updateInterval;
+let generationCount = 0;
+let populationCount = 0;
 
 document.addEventListener('DOMContentLoaded', function () {
   const gridContainer = document.getElementById('grid');
@@ -30,6 +32,7 @@ function initializeGrid(gridContainer) {
     }
   }
   updateGridDisplay();
+  updateCounters();
 }
 
 function toggleCell() {
@@ -38,6 +41,7 @@ function toggleCell() {
   const col = index % gridSize;
   grid[row][col] = !grid[row][col];
   updateGridDisplay();
+  updateCounters();
 }
 
 function updateGridDisplay() {
@@ -76,6 +80,7 @@ function updateGame() {
 
   grid = newGrid;
   updateGridDisplay();
+  updateCounters();
 }
 
 function countNeighbors(row, col) {
@@ -111,7 +116,10 @@ function createEmptyGrid(size) {
 
 function resetGame() {
   grid = createRandomGrid(gridSize);
+  generationCount = 0;
+  populationCount = 0;
   updateGridDisplay();
+  updateCounters();
   if (running) {
     toggleGame();
   }
@@ -129,4 +137,24 @@ function startGame() {
     running = true;
     updateInterval = setInterval(updateGame, 500);
   }
+}
+
+function updateCounters() {
+  const generationCounter = document.getElementById('generationCounter');
+  const populationCounter = document.getElementById('populationCounter');
+  generationCount++;
+  populationCount = countPopulation();
+  generationCounter.textContent = `Générations: ${generationCount}`;
+  populationCounter.textContent = `Population: ${populationCount}`;
+}
+function countPopulation() {
+  let count = 0;
+  for (let i = 0; i < gridSize; i++) {
+    for (let j = 0; j < gridSize; j++) {
+      if (grid[i][j]) {
+        count++;
+      }
+    }
+  }
+  return count;
 }
