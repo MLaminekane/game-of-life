@@ -158,3 +158,21 @@ function countPopulation() {
   }
   return count;
 }
+
+const gliderPattern = [
+  [0, 1, 0],
+  [0, 0, 1],
+  [1, 1, 1]
+];
+
+function resetWithGlider() {
+  grid = createEmptyGrid(gridSize);
+
+  for (let i = 0; i < gliderPattern.length; i++) {
+    for (let j = 0; j < gliderPattern[i].length; j++) {
+      grid[i][j] = gliderPattern[i][j] === 1;
+    }
+  }
+
+  updateGridDisplay();
+}

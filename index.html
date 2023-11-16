@@ -44,10 +44,10 @@
                     <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                         <button
                             class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-                            onclick="resetGame()"><span>2.</span> Aleatoire</button>
+                            onclick="resetGame()"><span>2.</span> Random</button>
                     </li>
                     <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                        <button id="userButton" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400" onclick="toggleUserMode()"><span>3.</span>Reset</button>
+                        <button id="userButton" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400" onclick="toggleUserMode()"><span>3.</span> Reset</button>
                     </li>
                         <a href="https://github.com/MLaminekane">
                             <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
@@ -68,10 +68,10 @@
         </div>
     </nav>
 
-    <div id="review" style="width: 90vw; height: auto;justify-content: space-evenly;display: flex; flex-wrap: wrap; justify-content: center;">
-        
+    <div id="review" style="width: 90vw; height: auto;justify-content: space-evenly;display: flex; flex-wrap: wrap; justify-content: center;">  
       <div class="mt-8 flex flex-col items-center "> 
         <div class="grid mt-8" id="grid"></div>
+        <button id="resetGliderButton" class="bg-green-500 hover:bg-green-700 text-white font-bold  px-4 rounded" onclick="resetWithGlider()">Glisseur</button>
         <div class="flex" >
             <div style="height: auto;">
                 <div class="flex flex-col items-center justify-center">
