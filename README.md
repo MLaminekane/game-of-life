@@ -16,3 +16,4 @@ Le Jeu de la Vie est un automate cellulaire créé par John Conway en 1970. Il f
 - **Pause**: Pause l'animation.
 - **Random**: Pour génére des cellulues aléatoires
 - **Reset**: Recree une nouvelle animation.
+- **Glisseur**: pour générer le pattern(structure) glisseur du jeu de la vie
