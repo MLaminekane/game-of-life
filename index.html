@@ -65,9 +65,9 @@
         </div>
     </nav>
 
-    <div id="review" style="width: 90vw; height: auto;justify-content: space-evenly;display: flex; flex-wrap: wrap;align-items: center; justify-content: center;">
+    <div id="review" style="width: 90vw; height: auto;justify-content: space-evenly;display: flex; flex-wrap: wrap; justify-content: center;">
       <div class="mt-8"> 
-        <div class="grid" id="grid"></div>
+        <div class="grid mt-8" id="grid"></div>
       </div>
         <div style="height: auto;" class="mt-8">
             <div class="flex flex-col items-center justify-center">
@@ -80,7 +80,7 @@
                     Bien qu'ancien, le jeu de la vie reste un sujet de recherche actif, démontrant même des propriétés
                     étonnantes, telles que son pouvoir de calcul universel, capable de traiter les décimales de p!.
                 </p>
-                <p class="text-white mt-8">
+                <p class="text-white mt-4">
                     Dans ce jeu, chaque case peut être vivante (allumée) ou morte (éteinte). À chaque génération, les
                     règles suivantes déterminent l'état des cases en fonction du nombre de voisins (côtés et coins). Une
                     cellule vivante avec 4 voisins meurt d'étouffement, tandis qu'une cellule vivante avec 0 ou 1 voisin
@@ -88,12 +88,16 @@
                     exactement 3 voisins. Les modifications, naissances et morts, se produisent simultanément à chaque
                     génération, sans propagation des changements.
                 </p>
-                <p class="text-white mt-8">
+                <p class="text-white mt-4">
                     Le jeu de la vie propose d'observer l'évolution d'une population au fil des générations, en
                     examinant son extinction, sa croissance infinie ou sa stabilisation. Les règles, choisies
                     délibérément par Conway, visent à éviter les extrêmes de l'extinction rapide et de l'envahissement
                     total, préservant ainsi la richesse du jeu. L'équilibre subtil entre naissances et morts génère des
                     populations changeantes et imprévisibles, souvent confinées dans une région limitée.
+                </p>
+                <h1 class="text-red-500 mt-4">2. Présentation du jeu de la vie</h1>
+                <p class="text-white mt-4">
+                  Dans le jeu de la vie, chaque case peut être vivante (allumée) ou morte (éteinte). À chaque génération, l'état d'une case est déterminé en fonction des règles suivantes. On commence par compter le nombre de voisins de la case parmi les huit cases adjacentes (par côtés et coins). Si une case vivante a au moins 4 voisins vivants, elle meurt d'étouffement. Si elle n'a aucun ou un seul voisin vivant, elle meurt d'isolement. Si elle a exactement 2 ou 3 voisins, elle survit. Une case vide "naît" si elle a exactement 3 voisins. À chaque génération, toutes les modifications (naissances et morts) sont simultanées, sans propagation progressive des changements.
                 </p>
             </div>
         </div>
