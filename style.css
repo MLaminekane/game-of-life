@@ -1,7 +1,7 @@
 body {
   background-color: #1E293B;
-  margin: 0; 
-  padding: 20px; 
+  margin: 0;
+  padding: 20px;
 }
 
 .grid {
@@ -12,7 +12,7 @@ body {
   gap: 1px;
   width: 400px;
   max-width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .cell {
@@ -32,7 +32,7 @@ body {
   text-align: center;
   color: cornflowerblue;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 span {
@@ -41,7 +41,7 @@ span {
 
 p {
   text-align: justify;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 #review {
@@ -50,7 +50,7 @@ p {
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 @media (max-width: 480px) {
@@ -64,15 +64,17 @@ p {
   }
 
   .grid {
-    grid-template-columns: repeat(20,16px);
-    grid-template-rows: repeat(18, 18px);
+    grid-template-columns: repeat(20, 16.5px);
+    grid-template-rows: repeat(20, 20px);
     max-width: 100%;
-    margin: 20px auto; 
+    margin: 20px auto;
   }
-  #buttons{
+
+  #buttons {
     margin-top: 2vh;
   }
 }
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
   #review {
     flex-direction: column;
@@ -85,10 +87,11 @@ p {
 
   .grid {
     width: 100%;
-    max-width: 100%; 
-    margin: 20px auto; 
+    max-width: 100%;
+    margin: 20px auto;
   }
-  #buttons{
+
+  #buttons {
     margin-top: 2vh;
   }
 }
@@ -104,6 +107,6 @@ p {
 
   .grid {
     max-width: 100%;
-    margin: 20px auto; 
+    margin: 20px auto;
   }
 }
