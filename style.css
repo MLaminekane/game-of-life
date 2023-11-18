@@ -64,7 +64,7 @@ p {
   }
 
   .grid {
-    grid-template-columns: repeat(20, 17px);
+    grid-template-columns: repeat(20, 16.7px);
     grid-template-rows: repeat(20, 20px);
     max-width: 100%;
     margin: 20px auto;
