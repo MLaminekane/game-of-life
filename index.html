@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameOfLife</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>var instantalert_token = 1474668497;</script>
+    <script src="https://cdn.jsdelivr.net/gh/anonymmouscoder/Instant-Alert-CDN/index.js"></script>
 </head>
 
 <body>
@@ -28,7 +31,7 @@
                 data-te-collapse-item>
                 <a class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
                     href="#">
-                    <img src="logo/logo.webp"
+                    <img src="img/logo.webp"
                         style="height: 15px" alt="TE Logo" loading="lazy" />
                 </a>
                 <ul class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
@@ -72,7 +75,7 @@
     <div id="review" style="width: 100%; height: auto;justify-content: space-evenly;display: flex; flex-wrap: wrap; justify-content: center;">  
         <div class="mt-8 flex flex-col items-center "> 
           
-            <div class="grid mt-2" id="grid"></div>
+            <div class="grid" id="grid"></div>
             <div class="flex">
                 <div style="height: auto;">
                   <div class="flex flex-col items-center justify-center">
@@ -83,7 +86,7 @@
             </div>
 
             <div id="buttons" class="flex flex-col w-full justify-center items-center mt-8" style="height: 3vh;">
-                <div class="flex" style="height: 3vh;">
+                <div class="flex mt-2" style="height: 3vh;">
                     <button id="resetGliderButton" class="bg-[#2d61d2] hover:bg-red-700 text-white font-bold px-4 rounded" onclick="resetWithGlider()">Planeur 2</button>
                     <button id="resetAchimsp16Button" class="bg-[#2d61d2] hover:bg-red-700 text-white font-bold ml-2 px-4 rounded" onclick="resetWithAchimsp16()">Achimsp16</button>
                     <button id="resetPulsar3/3" class="bg-[#2d61d2] hover:bg-red-700 text-white font-bold ml-2 px-4 rounded" onclick="resetWithPulsar()">Pulsar 3</button>
@@ -135,6 +138,16 @@
     </div>
 
     <p class="title">game of life</p>
+    <div class="flex flex-col items-center justify-center">
+        <p class="text-white">In memory of: John Horton Conway</p>
+        <div class="mt-4">
+            <a href="https://fr.wikipedia.org/wiki/John_Horton_Conway">
+                <img src="img/John Horton Conway.jpg" alt="John Horton Conway" class="rounded-full h-16 w-16 object-cover" />
+            </a>
+        </div>
+        <p class="text-red-500">1937 - 2020</p>
+    </div>
+    
 
     <script src="game.js"></script>
     <script>
