@@ -310,5 +310,3 @@ function resetCustom2() {
 
   updateGridDisplay();
 }
-
-
