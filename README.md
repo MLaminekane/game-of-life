@@ -1,6 +1,6 @@
 # game life 
  Challenge de Elias Ba sur twitter pour recreer le jeu de vie
- #Lien de la page du jeu
+##Lien de la page du jeu
  - https://game-life-alpha.vercel.app/
 
 # Jeu de la Vie - Readme
@@ -16,3 +16,4 @@ Le Jeu de la Vie est un automate cellulaire créé par John Conway en 1970. Il f
 - **Pause**: Pause l'animation.
 - **Random**: Pour génére des cellulues aléatoires
 - **Reset**: Recree une nouvelle animation.
+- **Glisseur**: pour générer le pattern(structure) glisseur du jeu de la vie
